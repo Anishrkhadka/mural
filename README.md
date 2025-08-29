@@ -4,6 +4,9 @@
 
 A lightweight web app for displaying rotating wallpapers on your TV or large screen.  
 Runs entirely in Docker with a Python (Flask) backend and a simple web-based slideshow frontend.
+<p align="center">
+  <img src="./static/demo.gif" alt="Mural Logo"/>
+</p>
 
 ## ✨ Features
 

@@ -1,0 +1,8 @@
+{
+  "duration_seconds": 20,
+  "shuffle": true,
+  "fit_mode": "cover",
+  "order_by": "name",
+  "hide_cursor_after_ms": 3000,
+  "preload_next": true
+}

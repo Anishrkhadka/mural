@@ -1,0 +1,9 @@
+services:
+  wallpaper:
+    build: .
+    ports:
+      - "7200:8000"
+    volumes:
+      - ./wallpapers:/app/wallpapers:ro
+      - ./data:/app/data
+    restart: unless-stopped

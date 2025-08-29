@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Wallpaper Settings</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body class="settings-body">
+  <main class="panel">
+    <h1>Settings</h1>
+    <form id="settingsForm">
+      <label>
+        Slide duration (seconds)
+        <input type="number" name="duration_seconds" min="1" max="3600" required>
+      </label>
+
+      <label class="row">
+        <input type="checkbox" name="shuffle">
+        <span>Shuffle</span>
+      </label>
+
+      <label>
+        Fit mode
+        <select name="fit_mode">
+          <option value="cover">Cover (fill screen)</option>
+          <option value="contain">Contain (letterbox)</option>
+          <option value="actual">Actual size (centred)</option>
+        </select>
+      </label>
+
+      <label>
+        Order by
+        <select name="order_by">
+          <option value="name">Name</option>
+          <option value="mtime">Last modified</option>
+        </select>
+      </label>
+
+      <label>
+        Hide cursor after (ms)
+        <input type="number" name="hide_cursor_after_ms" min="0" step="100">
+      </label>
+
+      <label class="row">
+        <input type="checkbox" name="preload_next" checked>
+        <span>Preload next image</span>
+      </label>
+
+      <div class="buttons">
+        <button type="submit">Save</button>
+        <a class="button secondary" href="/">Back to slideshow</a>
+      </div>
+      <div id="saveMsg" class="save-msg" aria-live="polite"></div>
+    </form>
+  </main>
+
+  <script src="/static/settings.js"></script>
+</body>
+</html>

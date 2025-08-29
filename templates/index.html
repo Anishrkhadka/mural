@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Wallpaper Slideshow</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+  <meta name="color-scheme" content="dark light">
+</head>
+<body class="slideshow-body">
+  <div id="overlay" class="overlay hidden">
+    <div class="controls">
+      <button id="prevBtn" title="Previous (←)">⟨</button>
+      <button id="playPauseBtn" title="Play/Pause (Space)">⏯</button>
+      <button id="nextBtn" title="Next (→)">⟩</button>
+      <button id="fsBtn" title="Fullscreen (F)">⛶</button>
+      <a href="/settings" class="settings-link" title="Settings">Settings</a>
+    </div>
+  </div>
+
+  <div id="stage" class="stage">
+    <img id="imgA" class="slide" alt="Wallpaper A">
+    <img id="imgB" class="slide" alt="Wallpaper B">
+    <div id="emptyState" class="empty hidden">
+      <h1>No images found</h1>
+      <p>Add images into the <code>wallpapers/</code> folder (JPG, PNG, GIF, WebP).</p>
+      <p><a href="/settings">Open settings</a></p>
+    </div>
+  </div>
+    <!-- Heads-up display: progress + clock -->
+  <div class="hud">
+    <div class="timer" id="timer" title="Time left for this slide">
+      <div class="timer-inner"></div>
+    </div>
+    <div class="clock" id="clock">
+      <div class="time" id="clockTime">--:--</div>
+      <div class="date" id="clockDate">--</div>
+    </div>
+  </div>
+  
+  <script src="/static/app.js"></script>
+
+
+</body>
+</html>

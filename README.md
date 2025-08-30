@@ -110,14 +110,14 @@ docker compose up -d --restart=unless-stopped
 ## How to Use Mural – Workflow Overview
 
 ```mermaid
-flowchart TD
+flowchart LR
   A[Start] --> B[Host **Mural**]
-  B -->|Docker compose up| B1[Expose http://<host-ip>:8000]
+  B -->|Docker compose up| B1[Expose - http://&lt;host-ip&gt;:7200/]
   B1 --> C[Open Mural in browser to verify]
 
   subgraph CONTENT["Prepare Artwork"]
-    D[Download art (e.g., from Artvee)] --> E[Organise into `wallpapers/`]
-    E --> E1[Optional subfolders: `people`, `places`, `abstract`…]
+    D[Download art e.g., from Artvee] --> E[Organise into 'wallpapers/']
+    E --> E1[Optional subfolders: 'people', 'places', 'abstract'…]
   end
 
   C --> D
@@ -125,7 +125,7 @@ flowchart TD
 
   subgraph TV["TV Integration"]
     G[Install TVAppRepo APK] --> H[Create Web App Launcher]
-    H --> I[Set Launcher URL → http://<host-ip>:8000/]
+    H --> I[Set Launcher URL →  http://&lt;host-ip&gt;:7200/]
     I --> J[Optionally use Mural logo as app icon]
   end
 
@@ -133,8 +133,8 @@ flowchart TD
   J --> K[Launch the Mural app on TV]
 
   subgraph USE["Usage & Customisation"]
-    K --> L[Enter fullscreen (F or ⛶)]
-    L --> M[Adjust settings at `/settings` (duration, shuffle, fit)]
+    K --> L[Enter fullscreen - F or ⛶]
+    L --> M[Adjust settings at '/settings' - duration, shuffle, fit ]
     M --> N[Enjoy rotating wallpaper with clock & progress ring]
     N --> O[Add new images anytime; updated daily]
   end
@@ -142,7 +142,7 @@ flowchart TD
   style CONTENT fill:#0b3a,stroke:#1b5,stroke-width:1px,color:#fff
   style TV fill:#2a2a,stroke:#555,stroke-width:1px,color:#fff
   style USE fill:#1a1a,stroke:#444,stroke-width:1px,color:#fff
-
+```
 
 ## 📜 License
 

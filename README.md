@@ -107,41 +107,42 @@ For autostart on boot:
 docker compose up -d --restart=unless-stopped
 ```
 
-## Workflow
+## How to Use Mural – Workflow Overview
+
 ```mermaid
 flowchart TD
-  A[Start] --> B[Host <b>Mural</b>]
-  B -->|Docker compose up| B1[Expose http://<host-ip>:7200]
-  B1 --> C[Open Mural in a browser to verify]
+  A[Start] --> B[Host **Mural**]
+  B -->|Docker compose up| B1[Expose http://<host-ip>:8000]
+  B1 --> C[Open Mural in browser to verify]
 
   subgraph CONTENT["Prepare Artwork"]
-    D[Download public-domain/CC art (e.g. Artvee)] --> E[Organise into <code>wallpapers/</code>]
-    E --> E1[Optional subfolders: <i>people</i>, <i>places</i>, <i>abstract</i>...]
+    D[Download art (e.g., from Artvee)] --> E[Organise into `wallpapers/`]
+    E --> E1[Optional subfolders: `people`, `places`, `abstract`…]
   end
 
   C --> D
-  E1 --> F[Refresh page (or wait for daily auto-refresh)]
+  E1 --> F[Refresh page or wait for daily auto-refresh]
 
   subgraph TV["TV Integration"]
-    G[Install TVAppRepo (APK)] --> H[Create Web App Launcher]
-    H --> I[Set URL to <br/>http://<host-ip>:7200/]
-    I --> J[Optional: use Mural logo as app icon]
+    G[Install TVAppRepo APK] --> H[Create Web App Launcher]
+    H --> I[Set Launcher URL → http://<host-ip>:8000/]
+    I --> J[Optionally use Mural logo as app icon]
   end
 
   F --> G
   J --> K[Launch the Mural app on TV]
 
-  subgraph USE["Use & Customise"]
-    K --> L[Enter Fullscreen (F or ⛶)]
-    L --> M[Adjust Settings at /settings <br/>(duration, shuffle, fit mode)]
-    M --> N[Enjoy rotating wallpapers with clock + progress ring]
-    N --> O[Add new images anytime; folders auto-picked up daily]
+  subgraph USE["Usage & Customisation"]
+    K --> L[Enter fullscreen (F or ⛶)]
+    L --> M[Adjust settings at `/settings` (duration, shuffle, fit)]
+    M --> N[Enjoy rotating wallpaper with clock & progress ring]
+    N --> O[Add new images anytime; updated daily]
   end
 
   style CONTENT fill:#0b3a,stroke:#1b5,stroke-width:1px,color:#fff
   style TV fill:#2a2a,stroke:#555,stroke-width:1px,color:#fff
   style USE fill:#1a1a,stroke:#444,stroke-width:1px,color:#fff
-```
+
 
 ## 📜 License
 

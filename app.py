@@ -3,7 +3,7 @@ from flask import Flask, render_template, jsonify, request, send_from_directory,
 from pathlib import Path
 import json
 import time
-import os
+
 
 app = Flask(__name__, static_folder="static", template_folder="templates")
 
